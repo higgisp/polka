@@ -1,18 +1,24 @@
 set list listchars=tab:\ \ ,trail:·
 let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
 
-colorscheme base16-default
+colorscheme github
 set background=light
 let Powerline_colorscheme="default"
 let g:Powerline_symbols = 'fancy'
 
 " make sure vimgutter looks good
-" highlight SignColumn ctermbg=black
+highlight SignColumn ctermbg=white
 highlight link GitGutterAdd DiffAdd
 highlight link GitGutterChange DiffChange
 highlight link GitGutterDelete DiffDelete
 highlight link GitGutterChangeDelete DiffChangeDelete
-let g:gitgutter_highlight_lines = 0
+let g:gitgutter_highlight_lines = 1
+
+" allow gist.vim to copy with -c
+let g:gist_clip_command = 'pbcopy'
+
+" let gist.vim detect filetype
+let g:gist_detect_filetype = 1
 
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
@@ -24,3 +30,6 @@ let g:syntax_js=['function', 'return', 'solarized', 'this', 'proto']
 
 " make escape work sensibly
 set esckeys!
+
+" make sure ctrl p ignores builds
+set wildignore+=*/tmp/*,*.zip,*/build
