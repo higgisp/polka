@@ -5,15 +5,15 @@ set -g status-right-length 150
 set -g status-fg blue
 set -g status-bg brightwhite
 set -g window-status-activity-attr bold
-set -g pane-border-fg brightgreen
-set -g pane-active-border-fg brightgreen
+set -g pane-border-fg blue
+set -g pane-active-border-fg brightblue
 set -g message-fg white
 set -g message-bg black
 set -g message-attr bold
 
-set -g status-left '#[fg=brightwhite,bg=blue,bold] ❐ #S #[fg=blue,bg=white,nobold]⮀#[fg=black,bg=white,bold] #(whoami) #[fg=white,bg=brightwhite,nobold]⮀'
-set -g window-status-format "#[fg=brightwhite,bg=brightwhite] #I #W "
-set -g window-status-current-format "#[fg=brightwhite,bg=white]⮀#[fg=black,bg=white,noreverse,bold] #I ⮁ #W #[fg=white,bg=brightwhite,nobold]⮀"
+set -g status-left '#[fg=brightwhite,bg=blue,bold] ✪ #S #[fg=blue,bg=white,nobold]⮀#[fg=white,bg=brightwhite,nobold]⮀'
+set -g window-status-format "#[fg=black,bg=brightwhite] #I #W "
+set -g window-status-current-format "#[fg=brightwhite,bg=white]⮀#[fg=red,bg=white,noreverse,bold] #I ⮁ #W #[fg=white,bg=brightwhite,nobold]⮀"
 set -g status-right "#(wemux status_users)"
 
 # make sure that escape works sensibly
